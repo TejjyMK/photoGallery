@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after
+    margin: 0
+
+body
+    font:
+        family: sans-serif
+        size: 62.5%
+
+.container
+    max-width: 1600pxx
+    padding: 5rem 2rem
+    margin: 0 auto
+
+.galleryImg
+    max-width: 100%
+    border-radius: 1rem
+    position: relative
+    transition: transform 250ms
+    cursor: pointer
+
+    &:hover
+        transform: translateY(-2px)
+        box-shadow: 3px 3px 10x black
+
+#gallery
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(22rem,1fr))
+    grid-template-rows: masonry
+    gap: 2rem
+
+h1
+    font-size: 3rem
+    text-align: center
+    padding-bottom: 2rem
+
+#popup
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgba(0, 0, 0, 0.95)
+    padding: 5rem
+    transform: translateY(-100%)
+    transition: 250ms transform
+
+#selectedImage
+    max-height: 50%
